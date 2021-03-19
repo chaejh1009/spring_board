@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>${board.bno }번 글 수정</h1>
-	<form action="/board/modify" method="post">
+	<form action="/board/modifyrun" method="post">
 		글쓴이<input name="writer" type="text" class="form-control"
 			readonly=true value="${board.writer }"><br>
 			

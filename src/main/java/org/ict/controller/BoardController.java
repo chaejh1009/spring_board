@@ -88,7 +88,7 @@ public class BoardController {
 	// 실제 수정이 이루어지는 로직은 post방식으로 만듭니다.
 	// 수정창으로 진입하는 부분과, 수정 후 디테일 페이지로
 	// 넘어오는 로직을 추가로 작성해주세요.
-	@GetMapping("/modify")
+	@PostMapping("/modify")
 	public String modify(Model model, Long bno) {
 		
 		// 계획
@@ -104,7 +104,7 @@ public class BoardController {
 	// 메서드 선언부에 BoardVO를 선언하고
 	// 리다이렉트시 글번호를 같이 넘기기 위해 
 	// RedirectAttributes를 선언합니다.
-	@PostMapping("modify")
+	@PostMapping("/modifyrun")
 	public String modify(BoardVO board, 
 					RedirectAttributes rttr) {
 		// 넘겨받은 글 정보를 갱신 등록
